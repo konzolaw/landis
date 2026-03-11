@@ -47,7 +47,7 @@ export default function CongestionPage() {
         }
       })
       .catch(err => console.error('Error fetching chart data:', err));
-  }, [selectedDay]);
+  }, [selectedDay]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const formatHour = (hour: string) => {
     const intHour = parseInt(hour, 10);
