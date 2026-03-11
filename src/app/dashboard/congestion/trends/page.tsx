@@ -33,6 +33,7 @@ export default function CongestionPage() {
   }, []);
 
   // Fetch data when selectedDay changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!selectedDay) return;
 
@@ -47,7 +48,7 @@ export default function CongestionPage() {
         }
       })
       .catch(err => console.error('Error fetching chart data:', err));
-  }, [selectedDay]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [selectedDay]);
 
   const formatHour = (hour: string) => {
     const intHour = parseInt(hour, 10);
