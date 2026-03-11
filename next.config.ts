@@ -10,10 +10,12 @@ const nextConfig: NextConfig = {
         port: '8000',
         pathname: '/vehicles/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'openweathermap.org',
+      },
     ],
-    domains: ['openweathermap.org'],
   },
-
 };
 
 export default nextConfig;
